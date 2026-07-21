@@ -1,0 +1,29 @@
+[
+  {
+    "id": 1,
+    "employeeName": "Kateryna",
+    "employeeSurname": "Plutova",
+    "type": "Vacation",
+    "startDate": "2026-07-21",
+    "endDate": "2026-07-30",
+    "status": "Pending"
+  },
+  {
+    "id": 2,
+    "employeeName": "Anna",
+    "employeeSurname": "Kovalenko",
+    "type": "Sick leave",
+    "startDate": "2026-07-15",
+    "endDate": "2026-07-17",
+    "status": "Approved"
+  },
+  {
+    "id": 3,
+    "employeeName": "Nastalija",
+    "employeeSurname": "Ivanova",
+    "type": "Remote work",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-23",
+    "status": "Rejected"
+  }
+]

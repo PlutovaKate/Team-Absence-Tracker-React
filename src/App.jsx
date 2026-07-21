@@ -3,13 +3,15 @@ import AbsenceList from "./Components/AbsenceList/AbsenceList";
 import Header from "./Components/Header/Header";
 import StatusFilter from "./Components/StatusFilter/StatusFilter";
 
+import data from "./data/absences.json";
+
 function App() {
   return (
-    <div>
-      <Header />
+    <div className="app">
+      <Header text="Team Absence Tracker" />
       <AbsenceForm />
       <StatusFilter />
-      <AbsenceList />
+      <AbsenceList absences={data} />
     </div>
   );
 }

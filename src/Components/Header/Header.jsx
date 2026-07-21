@@ -1,7 +1,7 @@
-function Header() {
+function Header({ text }) {
   return (
     <header>
-      <h1>Team Absence Tracker</h1>
+      <h1>{text}</h1>
     </header>
   );
 }

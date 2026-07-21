@@ -12,6 +12,11 @@ function AbsenceForm() {
         </label>
 
         <label className="absence-form-field">
+          Employee Surname
+          <input type="text" />
+        </label>
+
+        <label className="absence-form-field">
           Absence type
           <select>
             <option value="">Select absence type</option>

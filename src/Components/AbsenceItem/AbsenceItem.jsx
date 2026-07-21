@@ -1,11 +1,12 @@
 import "./AbsenceItem.css";
 
 function AbsenceItem({
-  employee = "John Smith",
-  type = "Vacation",
-  startDate = "2026-07-21",
-  endDate = "2026-07-30",
-  status = "Pending",
+  employeeName,
+  employeeSurname,
+  type,
+  startDate,
+  endDate,
+  status,
 }) {
   const normalizedStatus = status.toLowerCase();
   const isPending = normalizedStatus === "pending";
@@ -14,7 +15,10 @@ function AbsenceItem({
     <article className="absence-item-card">
       <div className="absence-item-header">
         <div>
-          <h3>{employee}</h3>
+          <h3>
+            {employeeName} {employeeSurname}
+          </h3>
+
           <p className="absence-item-type">{type}</p>
         </div>
         <span className={`absence-item-status ${normalizedStatus}`}>
