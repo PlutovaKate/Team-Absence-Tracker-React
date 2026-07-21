@@ -1,11 +1,8 @@
-import { useState } from "react";
 import "./StatusFilter.css";
 
 const options = ["All", "Pending", "Approved", "Rejected"];
 
-function StatusFilter() {
-  const [active, setActive] = useState("All");
-
+function StatusFilter({ active = "All" }) {
   return (
     <div className="status-filter" role="tablist" aria-label="Status filter">
       {options.map((option) => (
@@ -13,7 +10,6 @@ function StatusFilter() {
           key={option}
           type="button"
           className={active === option ? "active" : ""}
-          onClick={() => setActive(option)}
         >
           {option}
         </button>

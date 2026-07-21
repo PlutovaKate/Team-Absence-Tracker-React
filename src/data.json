@@ -6,7 +6,7 @@
     "type": "Vacation",
     "startDate": "2026-07-21",
     "endDate": "2026-07-30",
-    "status": "Approved"
+    "status": "approved"
   },
   {
     "id": 2,
@@ -15,7 +15,7 @@
     "type": "Sick Leave",
     "startDate": "2026-07-19",
     "endDate": "2026-07-23",
-    "status": "Pending"
+    "status": "pending"
   },
   {
     "id": 3,
@@ -24,6 +24,6 @@
     "type": "Remote Work",
     "startDate": "2026-07-22",
     "endDate": "2026-07-22",
-    "status": "Approved"
+    "status": "approved"
   }
 ]

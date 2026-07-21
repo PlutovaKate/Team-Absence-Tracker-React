@@ -39,9 +39,9 @@ function AbsenceForm() {
         <label className="absence-form-field">
           Status
           <select>
-            <option value="pending">Pending</option>
-            <option value="approved">Approved</option>
-            <option value="rejected">Rejected</option>
+            <option value="pending">pending</option>
+            <option value="approved">approved</option>
+            <option value="rejected">rejected</option>
           </select>
         </label>
 

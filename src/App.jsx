@@ -10,7 +10,7 @@ function App() {
     <div className="app">
       <Header text="Team Absence Tracker" />
       <AbsenceForm />
-      <StatusFilter />
+      <StatusFilter active="All" />
       <AbsenceList absences={data} />
     </div>
   );

@@ -8,9 +8,6 @@ function AbsenceItem({
   endDate,
   status,
 }) {
-  const normalizedStatus = status.toLowerCase();
-  const isPending = normalizedStatus === "pending";
-
   return (
     <article className="absence-item-card">
       <div className="absence-item-header">
@@ -21,7 +18,7 @@ function AbsenceItem({
 
           <p className="absence-item-type">{type}</p>
         </div>
-        <span className={`absence-item-status ${normalizedStatus}`}>
+        <span className={`absence-item-status ${status}`}>
           {status}
         </span>
       </div>
@@ -37,7 +34,7 @@ function AbsenceItem({
         </div>
       </div>
 
-      {isPending && (
+      {status === "pending" && (
         <div className="absence-item-actions">
           <button type="button" className="absence-item-btn approve">
             Approve
