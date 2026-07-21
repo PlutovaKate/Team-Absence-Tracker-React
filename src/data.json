@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "employee": "John Smith",
+    "type": "Vacation",
+    "startDate": "2026-07-21",
+    "endDate": "2026-07-30",
+    "status": "Approved"
+  },
+  {
+    "id": 2,
+    "employee": "Emma Johnson",
+    "type": "Sick Leave",
+    "startDate": "2026-07-19",
+    "endDate": "2026-07-23",
+    "status": "Pending"
+  },
+  {
+    "id": 3,
+    "employee": "Michael Brown",
+    "type": "Remote Work",
+    "startDate": "2026-07-22",
+    "endDate": "2026-07-22",
+    "status": "Approved"
+  },
+  {
+    "id": 4,
+    "employee": "Sophia Wilson",
+    "type": "Vacation",
+    "startDate": "2026-08-01",
+    "endDate": "2026-08-03",
+    "status": "Rejected"
+  },
+  {
+    "id": 5,
+    "employee": "Daniel Miller",
+    "type": "Vacation",
+    "startDate": "2026-08-10",
+    "endDate": "2026-08-20",
+    "status": "Pending"
+  },
+  {
+    "id": 6,
+    "employee": "Olivia Davis",
+    "type": "Sick Leave",
+    "startDate": "2026-07-18",
+    "endDate": "2026-07-20",
+    "status": "Approved"
+  }
+]

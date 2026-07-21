@@ -1,0 +1,164 @@
+.absence-item-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8faff 100%);
+  border: 1px solid #e7e7ef;
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.absence-item-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, #8b5cf6 0%, #3b82f6 100%);
+}
+
+.absence-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #f0f0f5;
+}
+
+.absence-item-card:nth-child(2n) {
+  background: linear-gradient(135deg, #fcfdff 0%, #f4f7ff 100%);
+}
+
+.absence-item-card:nth-child(2n)::before {
+  background: linear-gradient(180deg, #3b82f6 0%, #0f766e 100%);
+}
+
+.absence-item-card:nth-child(3n) {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbff 100%);
+}
+
+.absence-item-card:nth-child(3n)::before {
+  background: linear-gradient(180deg, #14b8a6 0%, #6366f1 100%);
+}
+
+.absence-item-header h3 {
+  margin: 0 0 3px;
+  color: #111827;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.absence-item-type {
+  margin: 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.absence-item-status {
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+}
+
+.absence-item-status.pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.absence-item-status.approved {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.absence-item-status.rejected {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.absence-item-dates {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+@media (max-width: 640px) {
+  .absence-item-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .absence-item-dates {
+    grid-template-columns: 1fr;
+  }
+
+  .absence-item-actions {
+    flex-direction: column;
+  }
+
+  .absence-item-btn {
+    width: 100%;
+  }
+}
+
+.absence-item-date {
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+  border-radius: 10px;
+  padding: 9px 10px;
+}
+
+.absence-item-date span {
+  display: block;
+  font-size: 10px;
+  color: #6b7280;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.absence-item-date p {
+  margin: 0;
+  color: #111827;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.absence-item-actions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.absence-item-btn {
+  border: none;
+  border-radius: 999px;
+  padding: 7px 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.absence-item-btn:hover {
+  transform: translateY(-1px);
+}
+
+.absence-item-btn.approve {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.absence-item-btn.reject {
+  background: #fee2e2;
+  color: #991b1b;
+}
