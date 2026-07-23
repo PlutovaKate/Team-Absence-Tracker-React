@@ -5,13 +5,41 @@ import StatusFilter from "./Components/StatusFilter/StatusFilter";
 
 import data from "./data/absences.json";
 
+import { useState } from "react";
+
 function App() {
+  const [activeFilter, setActiveFilter] = useState("all");
+  const [absenceData, setAbsenceData] = useState(data);
+
+  function changeStatusPending(id, newStatus) {
+    const employeeWithNewStatus = absenceData.map((absentEmployee) => {
+      if (absentEmployee.id === id) {
+        return { ...absentEmployee, status: newStatus };
+      } else {
+        return absentEmployee;
+      }
+    });
+
+    setAbsenceData(employeeWithNewStatus);
+  }
+
+  const filteredAbsences =
+    activeFilter === "all"
+      ? absenceData
+      : absenceData.filter((absence) => absence.status === activeFilter);
+
   return (
     <div className="app">
       <Header text="Team Absence Tracker" />
       <AbsenceForm />
-      <StatusFilter active="All" />
-      <AbsenceList absences={data} />
+      <StatusFilter
+        active={activeFilter}
+        handleFilterChange={setActiveFilter}
+      />
+      <AbsenceList
+        absences={filteredAbsences}
+        handleChangeStatus={changeStatusPending}
+      />
     </div>
   );
 }

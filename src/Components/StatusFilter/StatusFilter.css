@@ -16,6 +16,7 @@
   color: var(--text);
   background: var(--card-bg);
   cursor: pointer;
+  text-transform: uppercase;
 }
 
 .status-filter button:hover {

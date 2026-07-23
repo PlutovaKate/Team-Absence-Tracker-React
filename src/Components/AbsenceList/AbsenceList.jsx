@@ -1,7 +1,7 @@
 import AbsenceItem from "../AbsenceItem/AbsenceItem";
 import "./AbsenceList.css";
 
-function AbsenceList({ absences }) {
+function AbsenceList({ absences, handleChangeStatus }) {
   return (
     <ul className="absence-list">
       {absences.map((absence) => (
@@ -13,6 +13,8 @@ function AbsenceList({ absences }) {
             startDate={absence.startDate}
             endDate={absence.endDate}
             status={absence.status}
+            handleChangeStatus={handleChangeStatus}
+            id={absence.id}
           />
         </li>
       ))}

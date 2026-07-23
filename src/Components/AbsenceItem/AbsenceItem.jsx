@@ -7,6 +7,8 @@ function AbsenceItem({
   startDate,
   endDate,
   status,
+  id,
+  handleChangeStatus,
 }) {
   return (
     <article className="absence-item-card">
@@ -18,9 +20,7 @@ function AbsenceItem({
 
           <p className="absence-item-type">{type}</p>
         </div>
-        <span className={`absence-item-status ${status}`}>
-          {status}
-        </span>
+        <span className={`absence-item-status ${status}`}>{status}</span>
       </div>
 
       <div className="absence-item-dates">
@@ -36,10 +36,18 @@ function AbsenceItem({
 
       {status === "pending" && (
         <div className="absence-item-actions">
-          <button type="button" className="absence-item-btn approve">
+          <button
+            type="button"
+            className="absence-item-btn approve"
+            onClick={() => handleChangeStatus(id, "approved")}
+          >
             Approve
           </button>
-          <button type="button" className="absence-item-btn reject">
+          <button
+            type="button"
+            className="absence-item-btn reject"
+            onClick={() => handleChangeStatus(id, "rejected")}
+          >
             Reject
           </button>
         </div>
