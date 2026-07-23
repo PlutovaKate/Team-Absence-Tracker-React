@@ -28,10 +28,15 @@ function App() {
       ? absenceData
       : absenceData.filter((absence) => absence.status === activeFilter);
 
+  function addAbsenceFromForm(newAbsenceFromForm) {
+    const newAbsenceWithId = { ...newAbsenceFromForm, id: Date.now() };
+    setAbsenceData([...absenceData, newAbsenceWithId]);
+  }
+
   return (
     <div className="app">
       <Header text="Team Absence Tracker" />
-      <AbsenceForm />
+      <AbsenceForm onAddAbsence={addAbsenceFromForm} />
       <StatusFilter
         active={activeFilter}
         handleFilterChange={setActiveFilter}
